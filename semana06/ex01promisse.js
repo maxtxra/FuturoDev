@@ -1,5 +1,7 @@
 const prompt = require('prompt-sync')()
 
+const numeroPrompt = parseInt(prompt("Digite um número para verificar: "))
+
 function checkpar(num) {
     return new Promise((resolve, reject) => {
         if (num % 2 === 0) {
@@ -10,7 +12,7 @@ function checkpar(num) {
     });
 }
 
-const numeroPrompt = parseInt(prompt("Digite um número para verificar: "))
+
 
 checkpar(numeroPrompt)
     .then(msg => {
